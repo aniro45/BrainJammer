@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Brain Jammer</string>
+    <string name="enter">Enter!</string>
+    <string name="_3_26">3+26</string>
+    <string name="correct">Correct</string>
+    <string name="_30s">30s</string>
+    <string name="_0_0">0/0</string>
+    <string name="_0">0</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_0_00">0/00</string>
+    <string name="play_again">Play Again</string>
+    <string name="start">Start!</string>
 </resources>

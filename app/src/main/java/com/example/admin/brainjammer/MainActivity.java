@@ -2,6 +2,7 @@ package com.example.admin.brainjammer;
 
 import android.graphics.Color;
 import android.os.CountDownTimer;
+import android.os.Vibrator;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
 
        public void playAgain(View view){
-
            score = 0;
            numberOfQuestions = 0;
            timerTextView.setText("30s");
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                    timerTextView.setText("0s");
                    resultTextView.setTextColor(Color.BLACK);
                    resultTextView.setText("Your Score is :" + Integer.toString(score));
-                   Toast.makeText(MainActivity.this, "Done", Toast.LENGTH_SHORT).show();
+                  // Toast.makeText(MainActivity.this, "Done", Toast.LENGTH_SHORT).show();
                    button0.setEnabled(false);
                    button1.setEnabled(false);
                    button2.setEnabled(false);
@@ -126,13 +126,17 @@ public class MainActivity extends AppCompatActivity {
             score++;
 
             resultTextView.setTextColor(Color.GREEN);
-            resultTextView.setText("Correct");
+            resultTextView.setText("Correct..!!!");
 
             Log.i("Correct" , "Correct");
 
         }else{
             resultTextView.setTextColor(Color.RED);
             resultTextView.setText("Wrong..!!!");
+
+            Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+               vibrator.vibrate(500);
+
             Log.i("Wrong", "Wrong");
         }
           numberOfQuestions++;
